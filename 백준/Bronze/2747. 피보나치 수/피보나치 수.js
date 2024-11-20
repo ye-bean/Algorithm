@@ -10,4 +10,4 @@ function fibonacci(n) {
     return dp[n];
 }
 
-console.log(fibonacci(input)); // 55
+console.log(fibonacci(input));
