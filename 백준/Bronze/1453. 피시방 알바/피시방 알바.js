@@ -1,18 +1,17 @@
 const fs = require("fs");
 const input = fs.readFileSync(0).toString().trim().split('\n');
-const n = input.shift();
-const m = input.join('').split(' ').map(Number).sort((a,b) => a - b);
+const n = Number(input[0]);
+const m = input[1].split(' ').map(Number);
 
-let sit = [];
+const sit = new Set();
 let count = 0;
 
-for(let i = 0; i < n; i++){
-    if(sit.includes(m[i])) {
-        count += 1;
+for (let i = 0; i < n; i++) {
+    if (sit.has(m[i])) {
+        count++;
     } else {
-        sit.push(m[i]);
+        sit.add(m[i]);
     }
-    
 }
 
 console.log(count);
