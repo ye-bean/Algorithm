@@ -1,15 +1,19 @@
-const fs = require("fs");
+const fs = require('fs');
+const n = parseInt(fs.readFileSync('/dev/stdin').toString().trim());
 
-const n = Number(fs.readFileSync(0).toString().trim());
+let arr = [];
 
-let queue = Array.from({ length: n }, (_, i) => i + 1); 
-let head = 0;
-let tail = n - 1;
-
-while (tail - head > 0) {
-    head++;
-    queue[++tail] = queue[head];
-    head++;
+for(let i = 1; i <=n; i++){
+    arr.push(i);
 }
 
-console.log(queue[head]);
+let start = 0;
+let end = n-1;
+
+while(arr.length - start > 1){
+    start++;
+    arr.push(arr[start]);
+    start++;
+}
+
+console.log(arr[start]);
