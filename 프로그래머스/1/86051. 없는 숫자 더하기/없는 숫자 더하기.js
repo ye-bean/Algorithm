@@ -1,3 +1,9 @@
 function solution(numbers) {
-    return 45-numbers.reduce((v,i) => v+i);
+    let total = 0;
+    for(const num of numbers){
+        total += num;
+    }
+    
+    return 45 - total;
 }
+
