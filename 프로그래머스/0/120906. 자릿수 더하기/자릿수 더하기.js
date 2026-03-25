@@ -1,5 +1,8 @@
 function solution(n) {
-    var str = n.toString().split('');
-    var num = str.map(x => parseInt(x));
-    return num.reduce((p,n) => p+n,0);
+    let arr = n.toString().split('').map(Number);
+    let answer = 0;
+    for(const num of arr){
+        answer += parseInt(num);
+    }
+    return answer;
 }
