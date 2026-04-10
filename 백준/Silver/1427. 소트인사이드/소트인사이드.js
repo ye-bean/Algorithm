@@ -1,4 +1,3 @@
-const fs = require("fs");
-const input = fs.readFileSync(0).toString().trim().split('').map(Number);
+const input = require('fs').readFileSync(0).toString().trim().split('');
 
-console.log(input.sort((a, b) => b - a).join(''));
+console.log(input.sort((a,b) => b - a).join(''));
