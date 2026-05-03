@@ -1,10 +1,5 @@
 function solution(s) {
-    var aa = ''
-    const count = Math.floor(s.length/2);
-    if(s.length%2 === 0){
-        aa = s[count-1]+s[count];
-    } else{
-        aa = s[count];
-    }
-    return aa;
+    let mid = Math.floor(s.length/2);
+    let answer = s.length%2 === 0 ? s[mid-1]+s[mid] : s[mid];
+    return answer;
 }
