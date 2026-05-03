@@ -1,3 +1,12 @@
 function solution(n) {
-    return n%2 === 0 ? '수박'.repeat(n/2) : '수박'.repeat(n/2) +'수';
+    let answer = '';
+    for(let i = 0; i < n; i++){
+        if(i%2 !== 0){
+            answer +='박';
+        } else {
+            answer +='수';
+        }
+    }
+    
+    return answer;
 }
