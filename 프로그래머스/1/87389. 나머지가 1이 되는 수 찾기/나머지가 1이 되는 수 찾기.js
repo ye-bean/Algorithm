@@ -1,7 +1,10 @@
 function solution(n) {
-    for(let i = 0; i<=1000000; i++){
-        if(n % i === 1){
-            return i;
+    let i = 2;
+    while(true){
+        if(n%i === 1){
+            break;
         }
+        i++;
     }
+    return i;
 }
